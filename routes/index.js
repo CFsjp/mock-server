@@ -1,11 +1,9 @@
 const bannerRoutes = require('./banner')
+const testRoutes = require('./test')
 
 function init(app) {
-  app.get('/test', function (req, res, next) {
-    res.send('hello')
-  })
-
   bannerRoutes(app)
+  testRoutes(app)
 }
 
 exports.init = init
